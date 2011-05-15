@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  vertex1_id: 1
+  vertex2_id: 1
+  edge_length: 1
+
+two:
+  vertex1_id: 1
+  vertex2_id: 1
+  edge_length: 1

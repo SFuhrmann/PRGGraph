@@ -1,0 +1,27 @@
+<h1>Listing graphs</h1>
+
+<table>
+  <tr>
+    <th>Vertex1</th>
+    <th>Vertex2</th>
+    <th>Edge length</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @graphs.each do |graph| %>
+  <tr>
+    <td><%= graph.vertex1_id %></td>
+    <td><%= graph.vertex2_id %></td>
+    <td><%= graph.edge_length %></td>
+    <td><%= link_to 'Show', graph %></td>
+    <td><%= link_to 'Edit', edit_graph_path(graph) %></td>
+    <td><%= link_to 'Destroy', graph, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Graph', new_graph_path %>

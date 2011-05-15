@@ -1,0 +1,29 @@
+<%= form_for(@graph) do |f| %>
+  <% if @graph.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@graph.errors.count, "error") %> prohibited this graph from being saved:</h2>
+
+      <ul>
+      <% @graph.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vertex1_id %><br />
+    <%= f.text_field :vertex1_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vertex2_id %><br />
+    <%= f.text_field :vertex2_id %>
+  </div>
+  <div class="field">
+    <%= f.label :edge_length %><br />
+    <%= f.text_field :edge_length %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

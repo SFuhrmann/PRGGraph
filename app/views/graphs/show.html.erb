@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vertex1:</b>
+  <%= @graph.vertex1_id %>
+</p>
+
+<p>
+  <b>Vertex2:</b>
+  <%= @graph.vertex2_id %>
+</p>
+
+<p>
+  <b>Edge length:</b>
+  <%= @graph.edge_length %>
+</p>
+
+
+<%= link_to 'Edit', edit_graph_path(@graph) %> |
+<%= link_to 'Back', graphs_path %>
